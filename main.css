@@ -1,0 +1,7 @@
+.btn-outline-primary {
+    transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+  }
+  
+  .btn-outline-primary svg path {
+    transition: fill 0.4s ease;
+  }
