@@ -1,3 +1,6 @@
+.gray {
+  color: #808080;
+}
 .btn-outline-primary {
     transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
   }
