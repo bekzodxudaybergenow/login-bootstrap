@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="./bootstrap-logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center flex-column gap-4 vh-100 container">
+        <div class="text-center ">
+            <img src="./bootstrap-logo.svg" alt="Bootstrap logo">
+            <h1 style="font-size: 36px">Log in to your account</h1>
+            <span class="gray">Welcome back! Please enter your details.</span>
+        </div>
+        <form class="w-100 needs-validation" style="max-width: 360px;" novalidate>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">
+                    <span>Email</span>
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Iltimos, emailingizni kiriting</div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">
+                    <span>Password</span>
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password" required>
+                <div class="invalid-feedback">Iltimos, parolingizni kiriting</div>
+            </div>
+            <div class="form-check mb-3 d-flex">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label ms-1" for="flexCheckChecked">
+                    Rememer me
+                </label>
+                <a class="ms-auto" href="/">Forgot password</a>
+            </div>
+            <button class="btn btn-primary w-100 mb-3" type="submit">Get Started</button>
+            <button class="btn btn-outline-primary w-100 d-flex justify-content-center align-items-center gap-2" type="submit">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_541_548)">
+                    <rect width="16" height="16" transform="translate(0 0.25)" fill="white" fill-opacity="0.01"/>
+                    <g clip-path="url(#clip1_541_548)">
+                    <path d="M15.5446 6.80719C15.6379 7.34414 15.6844 7.88819 15.6836 8.43319C15.6836 10.8672 14.8136 12.9252 13.2996 14.3182H13.3016C11.9776 15.5412 10.1576 16.2492 7.99965 16.2492C5.87792 16.2492 3.84309 15.4063 2.34279 13.906C0.842504 12.4057 -0.000350952 10.3709 -0.000350952 8.24919C-0.000350952 6.12745 0.842504 4.09262 2.34279 2.59233C3.84309 1.09204 5.87792 0.249185 7.99965 0.249185C9.98559 0.225927 11.9035 0.972018 13.3516 2.33119L11.0676 4.61519C10.242 3.82816 9.14015 3.39718 7.99965 3.41518C5.91265 3.41518 4.13965 4.82318 3.50765 6.71918C3.17256 7.71269 3.17256 8.78868 3.50765 9.78219H3.51065C4.14565 11.6752 5.91565 13.0832 8.00265 13.0832C9.08065 13.0832 10.0066 12.8072 10.7246 12.3192H10.7216C11.1386 12.043 11.4952 11.6852 11.77 11.2674C12.0448 10.8496 12.2321 10.3804 12.3206 9.88819H7.99965V6.80819H15.5446V6.80719Z" fill="currentColor"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_541_548">
+                    <rect width="16" height="16" fill="white" transform="translate(0 0.25)"/>
+                    </clipPath>
+                    <clipPath id="clip1_541_548">
+                    <rect width="16" height="16" fill="white" transform="translate(0 0.25)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Sign in</span>
+            </button>
+        </form>
+        <p class="gray">Sign in with Google<a href="/">Sign up</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
