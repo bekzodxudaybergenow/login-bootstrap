@@ -5,22 +5,22 @@
   
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
+        event.preventDefault()
+        event.stopPropagation()
+    
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+          form.classList.add('was-validated')
+          return
         }
         form.classList.add('was-validated')
+        jumpLogin()
       }, false)
     })
 })()
 
-const toastTrigger = document.getElementById('liveToastBtn');
-const toastLiveExample = document.getElementById('liveToast');
 
-if (toastTrigger) {
-  toastTrigger.addEventListener('click', (event) => {
-    event.preventDefault(); // form submit bo‘lmasin
-
+function jumpLogin() {
+    const toastLiveExample = document.getElementById('liveToast');
     const toast = new bootstrap.Toast(toastLiveExample);
     toast.show();
 
@@ -30,6 +30,5 @@ if (toastTrigger) {
 
     setTimeout(() => {
       window.location.href = "login.html";
-    }, 2000);
-  });
+    }, 1000);
 }
