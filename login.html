@@ -39,7 +39,7 @@
                 </label>
                 <a class="ms-auto" href="/">Forgot password</a>
             </div>
-            <button class="btn btn-primary w-100 mb-3" type="submit">Get Started</button>
+            <button class="btn btn-primary w-100 mb-3" id="liveToastBtn" type="submit">Sign in</button>
             <button class="btn btn-outline-primary w-100 d-flex justify-content-center align-items-center gap-2" type="submit">
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_541_548)">
@@ -59,6 +59,17 @@
                 </svg>
                 <span>Sign in</span>
             </button>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <strong class="me-auto">Xabar</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Muvoffaqqiyati hisobga kirdingiz!
+                  </div>
+                </div>
+              </div>
         </form>
         <p class="gray">Sign in with Google<a href="/">Sign up</a></p>
     </div>
