@@ -1,34 +1,39 @@
 (() => {
-    'use strict'
-  
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        event.preventDefault()
-        event.stopPropagation()
-    
-        if (!form.checkValidity()) {
-          form.classList.add('was-validated')
-          return
-        }
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault()
+      event.stopPropagation()
+
+      if (!form.checkValidity()) {
         form.classList.add('was-validated')
-        jumpLogin()
-      }, false)
-    })
+        return
+      }
+
+      form.classList.add('was-validated')
+      jumpLogin()
+    }, false)
+  })
 })()
 
-
 function jumpLogin() {
-    const toastLiveExample = document.getElementById('liveToast');
-    const toast = new bootstrap.Toast(toastLiveExample);
-    toast.show();
+  const toastLiveExample = document.getElementById('liveToast');
+  if (!toastLiveExample) {
+    window.location.href = "login.html";
+    return;
+  }
 
-    toastLiveExample.addEventListener('hidden.bs.toast', () => {
-      window.location.href = "login.html";
-    }, { once: true });
+  const toast = new bootstrap.Toast(toastLiveExample);
+  toast.show();
 
-    setTimeout(() => {
-      window.location.href = "login.html";
-    }, 1000);
+  toastLiveExample.addEventListener('hidden.bs.toast', () => {
+    window.location.href = "login.html";
+  }, { once: true });
+
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 3000);
 }
